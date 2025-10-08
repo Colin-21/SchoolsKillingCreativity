@@ -9,6 +9,26 @@
       body {
         font-family: Arial, sans-serif;
       }
+      
+
+  .hero-section {
+    background: url('https://www.guggenheim.org/wp-content/uploads/1924/01/53.1358_ph_web-1.jpg') center center/cover no-repeat;
+    padding: 60px 0;
+    position: relative;
+  }
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(233, 236, 239, 0.7); /* subtle overlay for readability */
+    z-index: 1;
+  }
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  /* ...existing code... */
+
       .navbar {
         background-color: #f8f9fa;
         border-bottom: 1px solid #ddd;
