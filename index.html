@@ -3,42 +3,105 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <title>School is Killing Creativity</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+      }
+      .hero-section {
+        background-color: #e9ecef;
+        padding: 60px 0;
+      }
+      .section-padding {
+        padding: 50px 0;
+      }
+      .card {
+        margin-bottom: 20px;
+      }
+      .stat-box {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+      footer {
+        background-color: #343a40;
+        color: white;
+        padding: 30px 0;
+        margin-top: 50px;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <a class="navbar-link" href="nhsd.org">School</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="navbar-brand font-weight-bold" href="#">The Real Truth</a>
-          </li>
-        </ul>
-        <div>
-          <a class="btn btn-outline-secondary mr-2" href="github.colinwfoster.com">Other Website</a>
-          <a class="btn btn-light" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
-          </a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="https://nhsd.org">School</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#problems">Problems</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#solutions">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#research">Research</a>
+            </li>
+          </ul>
+          <a class="btn btn-outline-secondary btn-sm" href="https://github.colinwfoster.com">Other Projects</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-light py-5">
+    <section class="hero-section">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <h1 class="display-4 font-weight-bold mb-3">School is Killing Creativity</h1>
-                <p class="lead mb-4">But not always</p>
-                <a class="btn btn-primary btn-lg" href="#">Learn More</a>
+          <div class="col-md-8 text-center">
+            <h1 class="mb-3">School is Killing Creativity</h1>
+            <p class="lead">But not always</p>
+            <a class="btn btn-primary mt-3" href="#about">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <h2 class="mb-4">Why This Matters</h2>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">The Problem</h5>
+                <p class="card-text">Education often prioritize standardized testing and conformity over creative expression. They would rather match state standards than help children develop skills for the real world.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">The Other Side</h5>
+                <p class="card-text">Schools also provide structure, chances for collaboration, and exposure to subjects.</p>
               </div>
             </div>
           </div>
@@ -46,7 +109,186 @@
       </div>
     </section>
 
-    <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-    <script src=
+    <!-- Quote Section -->
+    <section class="bg-light section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <blockquote class="blockquote">
+              <p class="mb-3">"Creativity is intelligence having fun."</p>
+              <footer class="blockquote-footer">Albert Einstein</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems" class="section-padding">
+      <div class="container">
+        <h2 class="mb-4">Key Challenges</h2>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Standardization</h5>
+                <p class="card-text">One-size-fits-all testing doesn't account for different learning styles and creative approaches.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Time Constraints</h5>
+                <p class="card-text">Rigid schedules leave little room for deep exploration and creative problem-solving.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Narrow Focus</h5>
+                <p class="card-text">Emphasis on "core subjects" sometimes neglects arts, music, and interdisciplinary thinking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-light section-padding">
+      <div class="container">
+        <h2 class="mb-4 text-center">Creativity by Age</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="stat-box">
+              <div class="stat-number">98%</div>
+              <p>of kindergartners test as creative geniuses</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-box">
+              <div class="stat-number">30%</div>
+              <p>of 10-year-olds maintain that level</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-box">
+              <div class="stat-number">12%</div>
+              <p>of 15-year-olds still score as creative</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="section-padding">
+      <div class="container">
+        <h2 class="mb-4">Possible Solutions</h2>
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Project-Based Learning</h5>
+                <p class="card-text">Incorporate more hands-on, real-world projects that allow students to apply knowledge creatively.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Arts Integration</h5>
+                <p class="card-text">Integrate arts across all subjects to foster creative thinking and multiple forms of expression.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Growth Mindset</h5>
+                <p class="card-text">Encourage experimentation and view mistakes as learning opportunities rather than failures.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Collaborative Spaces</h5>
+                <p class="card-text">Design learning environments that promote collaboration and exchange of diverse ideas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="bg-light section-padding">
+      <div class="container">
+        <h2 class="mb-4">Key Research</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Sir Ken Robinson's TED Talk</h5>
+                <p class="card-text">The most-watched TED talk explores how schools kill creativity and what we can do about it.</p>
+                <a href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity" class="btn btn-sm btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">NASA Creativity Study</h5>
+                <p class="card-text">Longitudinal research tracking creative thinking abilities from childhood through adulthood.</p>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Alternative Education Models</h5>
+                <p class="card-text">Montessori, Waldorf, and Reggio Emilia approaches that prioritize creative development alongside academics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>The Real Truth</h5>
+            <p>Exploring education, creativity, and innovation.</p>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <p>&copy; 2025 School & Creativity Project</p>
+            <p>
+              <a href="https://nhsd.org" class="text-white mr-3">NHSD</a>
+              <a href="https://github.colinwfoster.com" class="text-white">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
