@@ -3,40 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <title>School is Killing Creativity</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
+      :root {
+        --gray-700: #424242;
+        --gray-500: #737373;
+        --gray-800: #292929;
+        --gray-400: #a3a3a3;
+        --gray-100: whitesmoke;
+        --gray-900: #141414;
+        --green: #61ffc9;
+        --gray-25: #fcfcfc;
       }
-      
 
-  .hero-section {
-    background: url('https://www.guggenheim.org/wp-content/uploads/1924/01/53.1358_ph_web-1.jpg') center center/cover no-repeat;
-    padding: 60px 0;
-    position: relative;
-  }
-  .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(233, 236, 239, 0.7); /* subtle overlay for readability */
-    z-index: 1;
-  }
-  .hero-section .container {
-    position: relative;
-    z-index: 2;
-  }
-  /* ...existing code... */
+      body {
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hero-section {
+        background: url('https://www.guggenheim.org/wp-content/uploads/1924/01/53.1358_ph_web-1.jpg') center center/cover no-repeat;
+        padding: 60px 0;
+        position: relative;
+      }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(233, 236, 239, 0.7);
+        z-index: 1;
+      }
+      .hero-section .container {
+        position: relative;
+        z-index: 2;
+      }
 
       .navbar {
         background-color: #f8f9fa;
         border-bottom: 1px solid #ddd;
-      }
-      .hero-section {
-        background-color: #e9ecef;
-        padding: 60px 0;
       }
       .section-padding {
         padding: 50px 0;
@@ -44,25 +51,180 @@
       .card {
         margin-bottom: 20px;
       }
-      .stat-box {
-        background-color: #f8f9fa;
-        padding: 30px;
-        border-radius: 5px;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .stat-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #333;
-      }
       footer {
         background-color: #343a40;
         color: white;
         padding: 30px 0;
         margin-top: 50px;
       }
+
+      /* Intro Section */
+      .intro-wrapper {
+        position: relative;
+        height: 90vh;
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .intro-content {
+        max-width: 600px;
+        text-align: center;
+        padding: 20px;
+      }
+      .intro-content h2 {
+        font-size: 2.8rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+      .intro-content p {
+        font-size: 1.125rem;
+        color: var(--gray-500);
+      }
+
+      /* Tabs Section */
+      .section_tabs {
+        background-color: var(--gray-800);
+        border-radius: 2rem;
+        position: relative;
+        z-index: 2;
+      }
+      .padding-section-large {
+        padding: 7rem 0;
+      }
+      .tabs_height {
+        height: 300vh;
+      }
+      .tabs_sticky-wrapper {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+      }
+      .tabs_container {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+      }
+      .tabs_component {
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 0.4fr 1fr;
+        gap: 1.5rem;
+        padding: 0 3.3%;
+      }
       
+      .tabs_left {
+        border-radius: 1.25rem;
+        background-color: var(--gray-700);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .tabs_left-top {
+        height: 100%;
+        position: relative;
+      }
+      .tabs_let-content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        padding: 2rem 1rem;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+      .tabs_let-content.is-active {
+        opacity: 1;
+      }
+      .tabs_let-content h2 {
+        font-size: 2.125rem;
+        font-weight: 500;
+        line-height: 1.05;
+        color: var(--gray-100);
+        margin-bottom: 1.5rem;
+      }
+      .text-color-green {
+        color: var(--green);
+      }
+      .tabs_line {
+        width: 100%;
+        height: 1px;
+        background-color: var(--gray-500);
+        margin: 1.5rem 0;
+      }
+      .tabs_let-content p {
+        font-size: 1rem;
+        color: var(--gray-400);
+        margin: 0;
+      }
+
+      .tabs_left-bottom {
+        margin-top: 1.5rem;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.35rem;
+        border: 1px solid var(--green);
+        background-color: transparent;
+        color: var(--gray-25);
+        text-decoration: none;
+        border-radius: 0.6rem;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background-color: var(--green);
+        color: var(--gray-900);
+        text-decoration: none;
+      }
+
+      .tabs_right {
+        width: 100%;
+        height: 100%;
+        border-radius: 1.25rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .tabs_video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 1.25rem;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+      .tabs_video.is-active {
+        opacity: 1;
+      }
+      .tabs_video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media(max-width: 768px) {
+        .tabs_component {
+          grid-template-columns: 1fr;
+        }
+        .tabs_height {
+          height: 400vh;
+        }
+        .intro-content h2 {
+          font-size: 2rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -81,7 +243,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#problems">Problems</a>
             </li>
-            
           </ul>
           <a class="btn btn-outline-secondary btn-sm" href="https://github.colinwfoster.com">Other Projects</a>
         </div>
@@ -95,7 +256,7 @@
           <div class="col-md-8 text-center">
             <h1 class="mb-3">School is Killing Creativity</h1>
             <p class="lead">But not always</p>
-            <a class="btn btn-primary mt-3" href="#about">Learn More</a>
+            <a class="btn btn-primary bs-success-border-subtle mt-3" style="background: var(--green);" href="#about">Learn More</a>
           </div>
         </div>
       </div>
@@ -172,95 +333,78 @@
         </div>
       </div>
     </section>
- <div class="intro-wrapper">
-    <div class="intro" style="display: flex; justify-content: center; align-items: center; position: relative; z-index: 1;">
-      <div class="text-align-center" id="js-pin">
-        <div class="max-width-small align-center">
-          <div class="margin-bottom margin-small">
-            <h2 class="heading-style-h3" ><span class="light-green-underline">We are not just screwed</span></h2>
-        </div>
-        <p class="text-size-medium">
-        Take ownership of your learning journey. Seek out projects for yourself! <br>For example this website
-        </p>
+
+    <!-- Intro Wrapper -->
+    <div class="intro-wrapper">
+      <div class="intro-content">
+        <h2><span style="text-decoration: underline; text-decoration-color: #61ffc9;">We are not just screwed</span></h2>
+        <p>Take ownership of your learning journey. Seek out projects for yourself! <br>For example this website</p>
       </div>
     </div>
-  </div>
-</div>
     
-<section class="section_tabs" style="z-index: 2;">
-   <div class="padding-section-large">
-      <div class="tabs_height">
-         <div class="tabs_sticky-wrapper">
+    <!-- Tabs Section -->
+    <section class="section_tabs" id="tabs-section">
+      <div class="padding-section-large">
+        <div class="tabs_height">
+          <div class="tabs_sticky-wrapper">
             <div class="tabs_container">
-               <div class="tabs_component">
-                  <div class="tabs_left">
-                     <div class="tabs_left-top">
-                        <div class="tabs_let-content is-1">
-                           <h2 class="heading-style-h4 text-color-gray100">We just need to <span class="text-color-green">be creative</span> in a new way</h2>
-                           <div class="tabs_line"></div>
-                           <p class="text-size-small text-color-gray400">You need to help nurish your own creativity and ask to pursue your own passions</p>
-                        </div>
-                        <div class="tabs_let-content is-2">
-                           <h2 class="heading-style-h4 text-color-gray100">Best in class energy management for <span class="text-color-green">optimal autonomy</span></h2>
-                           <div class="tabs_line"></div>
-                           <p class="text-size-small text-color-gray400">3 riding modes: 🌱 eco, ⚡️ normal & 🚀 boost - that offer up to 80 km range on one single charge with a swappable battery.</p>
-                        </div>
-                        <div class="tabs_let-content is-3">
-                           <h2 class="heading-style-h4 text-color-gray100">Durable and effortless, <span class="text-color-green">all the way</span></h2>
-                           <div class="tabs_line"></div>
-                           <p class="text-size-small text-color-gray400">We spent years crafting Yoda, stripping away unnecessary components to deliver a <strong>simple</strong> and <strong>efficient</strong> mobility experience.</p>
-                        </div>
-                     </div>
-                     <div class="tabs_left-bottom">
-  <a href="https://www.youtube.com/watch?v=iG9CE55wbtY&vl=en" target="_blank" style="text-decoration: none;">
-    <div class="button is-green is-secondary">
-      <div class="button-text">Sir Ken Robinson</div>
-      <div class="button-circle-wrapper">
-        <div class="button-icon _1 w-embed">
-          <svg height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.66699 11.3332L11.3337 4.6665" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M4.66699 4.6665H11.3337V11.3332" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <div class="button-icon _2 w-embed">
-          <svg height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.66699 11.3332L11.3337 4.6665" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M4.66699 4.6665H11.3337V11.3332" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="button-circlee background-color-green"></div>
-    </div>
-  </a>
-</div>
+              <div class="tabs_component">
+                <div class="tabs_left">
+                  <div class="tabs_left-top">
+                    <div class="tabs_let-content" data-index="0">
+                      <div>
+                        <h2>We just need to <span class="text-color-green">be creative</span> in a new way</h2>
+                        <div class="tabs_line"></div>
+                        <p>You need to help nurish your own creativity and ask to pursue your own passions</p>
+                      </div>
+                    </div>
+                    <div class="tabs_let-content" data-index="1">
+                      <div>
+                        <h2>Try to <span class="text-color-green">create art</span></h2>
+                        <div class="tabs_line"></div>
+                        <p>Go Painting! Sketch! Videotape! Pottery!</p>
+                      </div>
+                    </div>
+                    <div class="tabs_let-content" data-index="2">
+                      <div>
+                        <h2>Or maybe <span class="text-color-green">Play Some Music</span></h2>
+                        <div class="tabs_line"></div>
+                        <p>Learn the <strong>Violin</strong> or <strong>Tuba</strong> or maybe <strong>Guitar</strong>.</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="tabs_right">
-                     <div class="tabs_video is-1 w-background-video w-background-video-atom" style="display: flex; justify-content: flex-end; align-items: flex-start;">
-                        <video id="video-1" autoplay="" loop="" muted="" playsinline="" data-object-fit="cover">
-                           <source src="Test.mp4" data-wf-ignore="true">
-                           <source src="https://assets-global.website-files.com/65ae37af356fab4845432048/65be0fdac914d702e08f70ed_Yoda-Helmet_1-transcode.webm" data-wf-ignore="true">
-                        </video>
-                 </div>
-                     <div class="tabs_video w-background-video w-background-video-atom">
-                        <video id="video-2" autoplay="" loop="" muted="" playsinline="" data-object-fit="cover">
-                           <source src="https://assets-global.website-files.com/65ae37af356fab4845432048/65ae37af356fab48454320ae_BatteryRemoval_Pingpong_001-transcode.mp4" data-wf-ignore="true">
-                           <source src="https://assets-global.website-files.com/65ae37af356fab4845432048/65ae37af356fab48454320ae_BatteryRemoval_Pingpong_001-transcode.webm" data-wf-ignore="true">
-                        </video>
-                     </div>
-                     <div class="tabs_video w-background-video w-background-video-atom">
-                        <video id="video-3" autoplay="" loop="" muted="" playsinline="" data-object-fit="cover">
-                           <source src="https://assets-global.website-files.com/65ae37af356fab4845432048/65be104f9aba74d774b7f4a3_Yoda-Exploded-50-transcode.mp4" data-wf-ignore="true">
-                           <source src="https://assets-global.website-files.com/65ae37af356fab4845432048/65be104f9aba74d774b7f4a3_Yoda-Exploded-50-transcode.webm" data-wf-ignore="true">
-                        </video>
-                     </div>
+                  <div class="tabs_left-bottom">
+                    <a href="https://www.youtube.com/watch?v=iG9CE55wbtY&vl=en" target="_blank" class="button">
+                      <span>Sir Ken Robinson</span>
+                      <span>↗</span>
+                    </a>
                   </div>
-               </div>
+                </div>
+                <div class="tabs_right">
+                  <div class="tabs_video" data-index="0">
+                    <video autoplay loop muted playsinline>
+                      <source src="Test.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="tabs_video" data-index="1">
+                    <video autoplay loop muted playsinline>
+                      <source src="Test2.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="tabs_video" data-index="2">
+                    <video autoplay loop muted playsinline>
+                      <source src="Test3.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
-   </div>
-</section>
-<div style="height:50vh;"></div>
+    </section>
+
+    <div style="height:50vh;"></div>
 
     <!-- Footer -->
     <footer>
@@ -297,47 +441,49 @@
           }
         });
       });
-      gsap.registerPlugin(ScrollTrigger);
 
-// Pin the intro text section
-ScrollTrigger.create({
-  trigger: ".intro-wrapper",
-  start: "top top",
-  end: "bottom top",
-  pin: ".text-align-center",
-  pinSpacing: false
-});
-
-// Handling the scroll for the tabs
-document.addEventListener("scroll", function () {
-  let scrollPosition = window.scrollY;
-  let windowHeight = window.innerHeight + 550; // +550 = increasing the scroll distance before each class changes
-  let sections = document.querySelectorAll('.tabs_let-content');
-  let videos = document.querySelectorAll('.tabs_video');
-  let lastSectionIndex = sections.length - 1;
-
-  sections.forEach((section, index) => {
-    if (scrollPosition >= (index * windowHeight) && scrollPosition < ((index + 1) * windowHeight)) {
-      section.classList.add('is-1');
-      videos[index].classList.add('is-1');
-    } else {
-      // Remove is-1 class from all sections except the last one
-      if (index !== lastSectionIndex) {
-        section.classList.remove('is-1');
-        videos[index].classList.remove('is-1');
+      // Tabs scroll animation
+      const tabsSection = document.getElementById('tabs-section');
+      const contentSections = document.querySelectorAll('.tabs_let-content');
+      const videoSections = document.querySelectorAll('.tabs_video');
+      
+      function updateTabs() {
+        if (!tabsSection) return;
+        
+        const rect = tabsSection.getBoundingClientRect();
+        const sectionHeight = tabsSection.offsetHeight;
+        const viewportHeight = window.innerHeight;
+        
+        // Calculate how far we've scrolled through the tabs section
+        const scrollProgress = Math.max(0, -rect.top) / (sectionHeight - viewportHeight);
+        
+        // Determine which section should be active (0, 1, or 2)
+        let activeIndex = Math.floor(scrollProgress * 3);
+        activeIndex = Math.max(0, Math.min(2, activeIndex));
+        
+        // Update active states
+        contentSections.forEach((section, index) => {
+          if (index === activeIndex) {
+            section.classList.add('is-active');
+          } else {
+            section.classList.remove('is-active');
+          }
+        });
+        
+        videoSections.forEach((video, index) => {
+          if (index === activeIndex) {
+            video.classList.add('is-active');
+          } else {
+            video.classList.remove('is-active');
+          }
+        });
       }
-    }
-  });
-
-  // Keep is-1 class on the last section until user scrolls past it
-  if (scrollPosition > (lastSectionIndex * windowHeight)) {
-    sections[lastSectionIndex].classList.add('is-1');
-    videos[lastSectionIndex].classList.add('is-1');
-  } else {
-    sections[lastSectionIndex].classList.remove('is-1');
-    videos[lastSectionIndex].classList.remove('is-1');
-  }
-});
+      
+      // Update on scroll
+      window.addEventListener('scroll', updateTabs);
+      
+      // Initialize on load
+      window.addEventListener('load', updateTabs);
     </script>
   </body>
 </html>
